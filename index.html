@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Sorteo de Navidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+      .grinch-bg {
+        /* Smooth Grinch Gradient mimicking the movie poster studio lighting */
+        background: radial-gradient(circle at 50% 30%, #84cc16 0%, #4d7c0f 40%, #14532d 100%);
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3); 
+        border-radius: 5px;
+      }
+      
+      /* Air mail border effect for the cards (kept for admin/other views) */
+      .postal-border {
+        background-image: repeating-linear-gradient(135deg, #ef4444 0px, #ef4444 20px, #ffffff 20px, #ffffff 40px, #15803d 40px, #15803d 60px, #ffffff 60px, #ffffff 80px);
+        padding: 8px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Candy Cane Stripe Border for the Reveal Card */
+      .candy-stripe-border {
+        background: repeating-linear-gradient(
+          -45deg,
+          #dc2626,
+          #dc2626 20px,
+          #ffffff 20px,
+          #ffffff 40px
+        );
+        padding: 12px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        border-radius: 24px;
+      }
+      
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.3s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+</head>
+  <body class="grinch-bg text-slate-900 min-h-screen">
+    <div id="root"></div>
+  </body>
+</html>
